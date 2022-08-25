@@ -1,27 +1,29 @@
 import {FlatList, Image, Text, View} from 'react-native';
 import {styles} from './pcAccessoriesStyles';
+import {BackPacks} from '../backPacks/backPacks/BackPacks';
 
 const data = [
-    {image: require('../../common/images/CPU.jpeg'), title: 'CPU'},
-    {image: require('../../common/images/motherboard.png'), title: 'Motherboards'},
-    {image: require('../../common/images/videocard.png'), title: 'Video cards'},
-    {image: require('../../common/images/fan.png'), title: 'Fans'},
-    {image: require('../../common/images/dram.png'), title: 'DRAM'},
-    {image: require('../../common/images/ssd.png'), title: 'SSD'},
-    {image: require('../../common/images/powersupply.png'), title: 'Power supplies'},
-    {image: require('../../common/images/chassis.png'), title: 'Chassis'},
-    {image: require('../../common/images/display.png'), title: 'Displays'},
+    {image: require('../../common/images/pcAcessories/CPU.jpeg'), title: 'CPU'},
+    {image: require('../../common/images/pcAcessories/motherboard.png'), title: 'Motherboards'},
+    {image: require('../../common/images/pcAcessories/videocard.png'), title: 'Video cards'},
+    {image: require('../../common/images/pcAcessories/fan.png'), title: 'Fans'},
+    {image: require('../../common/images/pcAcessories/dram.png'), title: 'DRAM'},
+    {image: require('../../common/images/pcAcessories/ssd.png'), title: 'SSD'},
+    {image: require('../../common/images/pcAcessories/powersupply.png'), title: 'Power supplies'},
+    {image: require('../../common/images/pcAcessories/chassis.png'), title: 'Chassis'},
+    {image: require('../../common/images/pcAcessories/display.png'), title: 'Displays'},
 ];
 
 export const PCAccessories = () => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>PC accessories</Text>
             <FlatList
                 data={data}
                 numColumns={3}
-                columnWrapperStyle={{justifyContent: 'space-between'}}
+                columnWrapperStyle={{justifyContent: 'center'}}
+                ListHeaderComponent={<Text style={styles.title}>PC accessories</Text>}
+                ListFooterComponent={BackPacks}
                 renderItem={({item, index}) => (
                     <View>
                         <View style={styles.imageWrapper}>
@@ -31,10 +33,10 @@ export const PCAccessories = () => {
                                 style={styles.image}
                             />
                         </View>
-                        <Text style={{textAlign: 'center'}}>{item.title}</Text>
+                        <Text style={styles.imageTitle}>{item.title}</Text>
                     </View>
                 )}
-            ></FlatList>
+            />
         </View>
     );
 };

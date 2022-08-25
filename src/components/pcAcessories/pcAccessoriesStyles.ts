@@ -6,7 +6,7 @@ const PADDING = 30;
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingHorizontal: PADDING / 2,
+        // paddingHorizontal: PADDING / 2
     },
     title: {
         textAlign: 'center',
@@ -16,18 +16,23 @@ export const styles = StyleSheet.create({
         fontWeight: '500',
     },
     imageWrapper: {
-        width: (WIDTH - PADDING) / 3 - 5,
-        height: (WIDTH - PADDING) / 3 - 5,
+        width: (WIDTH - PADDING) / 3 - 10,
+        height: (WIDTH - PADDING) / 3 - 10,
         borderRadius: 10,
-        marginVertical: 5,
+        marginVertical: 10,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#f5f5f5',
+        marginHorizontal: PADDING / 4
     },
     image: {
-        width: 80,
-        height: 80,
+        width: '70%',
+        height: '70%',
         resizeMode: 'contain',
+    },
+    imageTitle: {
+        textAlign: 'center',
+        fontSize: 12,
     },
 });
