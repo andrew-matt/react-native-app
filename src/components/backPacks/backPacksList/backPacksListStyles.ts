@@ -11,10 +11,10 @@ export const styles = StyleSheet.create({
         fontWeight: '500',
     },
     imageContainer: {
-        marginBottom: 10,
+        // marginBottom: 10,
     },
     imageWrapper: {
-        padding: 10,
+        padding: 15,
     },
     image: {
         width: LENGTH,

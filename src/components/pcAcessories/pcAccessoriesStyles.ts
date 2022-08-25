@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     title: {
         textAlign: 'center',
         marginTop: 10,
-        marginBottom: 10,
+        // marginBottom: 10,
         fontSize: 20,
         fontWeight: '500',
     },

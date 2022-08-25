@@ -1,6 +1,8 @@
-import {TextInput, View} from 'react-native';
+import {TextInput, Image, View} from 'react-native';
 import {styles} from './headerStyles';
 import {useState} from 'react';
+
+const searchIcon = require('../../common/images/header/search.png');
 
 export const Header = () => {
 
@@ -12,12 +14,16 @@ export const Header = () => {
 
     return (
         <View style={styles.header}>
-            <TextInput
-                style={styles.input}
-                onChangeText={onChangeTextHandler}
-                placeholder={'Search'}
-                value={value}
-            />
+            <View style={styles.inputWrapper}>
+                <Image source={searchIcon} style={styles.icon}/>
+                <TextInput
+                    inlineImageLeft={searchIcon}
+                    style={styles.input}
+                    onChangeText={onChangeTextHandler}
+                    placeholder={'Search'}
+                    value={value}
+                />
+            </View>
         </View>
     );
 };

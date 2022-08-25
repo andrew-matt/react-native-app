@@ -3,6 +3,7 @@ import {StatusBar} from 'expo-status-bar';
 import {Header} from './src/components/header/Header';
 import {PCAccessories} from './src/components/pcAcessories/PCAccessories';
 import {styles} from './appStyles';
+import {Footer} from './src/components/footer/Footer';
 
 export default function App() {
     return (
@@ -10,6 +11,7 @@ export default function App() {
             <StatusBar style="inverted"/>
             <Header/>
             <PCAccessories/>
+            <Footer/>
         </View>
     );
 }
